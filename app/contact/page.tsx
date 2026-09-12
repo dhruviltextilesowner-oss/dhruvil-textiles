@@ -16,9 +16,9 @@ export default function ContactPage() {
                         {/* Left Side - Info */}
                         <div className="space-y-12">
                             <FadeIn>
-                                <span className="text-secondary uppercase tracking-[0.3em] text-xs font-bold">Get In Touch</span>
-                                <h1 className="text-5xl md:text-6xl font-serif font-medium mt-6 mb-8 text-primary">Let's start a conversation.</h1>
-                                <p className="text-neutral-600 text-lg leading-relaxed max-w-lg font-light">
+                                <span className="text-primary/70 uppercase tracking-[0.4em] text-xs font-medium mb-6 block">Get In Touch</span>
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-light text-primary mb-6 tracking-[0.2em] uppercase">Let's start a conversation.</h1>
+                                <p className="text-neutral-600 text-lg md:text-xl leading-relaxed max-w-xl font-light">
                                     Whether you need a custom quote for bulk orders or have questions about our manufacturing process, our team is here to assist you.
                                 </p>
                             </FadeIn>
