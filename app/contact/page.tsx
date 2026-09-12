@@ -9,7 +9,7 @@ import { Reveal, FadeIn } from "@/components/ui/Reveal";
 export default function ContactPage() {
     return (
         <>
-            <Header />
+            <Header theme="light" />
             <main className="pt-24 bg-[#F4F4F2] min-h-screen flex flex-col">
                 <section className="flex-grow container mx-auto px-4 py-20 lg:py-32">
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-start">

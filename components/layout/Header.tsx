@@ -16,7 +16,7 @@ const navigation = [
     { name: "Contact", href: "/contact" },
 ];
 
-export function Header() {
+export function Header({ theme = "dark" }: { theme?: "dark" | "light" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -65,16 +65,15 @@ export function Header() {
                                 href={item.href}
                                 className={cn(
                                     "text-xs font-medium uppercase tracking-widest hover:text-secondary transition-colors relative group",
-                                    scrolled ? "text-primary" : "text-white" // Assumes hero is dark. If hero is light, needs logic. 
-                                    // NOTE: Since global hero bg-neutral-900, white is correct for initial state.
+                                    scrolled ? "text-primary" : (theme === "light" ? "text-primary" : "text-white")
                                 )}
                             >
                                 {item.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary transition-all duration-300 group-hover:w-full" />
                             </Link>
                         ))}
-                        <Button size="sm" variant={scrolled ? "primary" : "outline"} asChild className={cn(
-                            !scrolled && "border-white text-white hover:bg-white hover:text-primary"
+                        <Button size="sm" variant={scrolled || theme === "light" ? "primary" : "outline"} asChild className={cn(
+                            !scrolled && theme === "dark" && "border-white text-white hover:bg-white hover:text-primary"
                         )}>
                             <a href="tel:+919978843336" className="gap-2">
                                 <Phone className="w-3 h-3" />
@@ -85,7 +84,7 @@ export function Header() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className={cn("md:hidden p-2 relative z-50", scrolled ? "text-primary" : "text-white")}
+                        className={cn("md:hidden p-2 relative z-50", scrolled || theme === "light" ? "text-primary" : "text-white")}
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X /> : <Menu />}
