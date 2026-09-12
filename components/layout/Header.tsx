@@ -45,7 +45,7 @@ export function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex-shrink-0 relative z-50">
                         <Image
-                            src="/logo.png"
+                            src="/logo.jpg"
                             alt="Dhruvil Textiles Logo"
                             width={120}
                             height={80}

@@ -11,7 +11,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <div>
                             <Image
-                                src="/logo.png"
+                                src="/logo.jpg"
                                 alt="Dhruvil Textiles Logo"
                                 width={140}
                                 height={100}

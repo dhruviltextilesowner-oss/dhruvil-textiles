@@ -13,12 +13,13 @@ export default function AboutPage() {
             <Header />
             <main className="bg-[#F4F4F2]">
                 {/* Header */}
-                <section className="bg-primary py-32 text-white text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dark.svg')] opacity-5" />
+                <section className="bg-neutral-900 py-32 text-white text-center relative overflow-hidden flex flex-col justify-center min-h-[50vh]">
+                    <div className="absolute inset-0 bg-[url('/images/1.jpg')] bg-cover bg-center" />
+                    <div className="absolute inset-0 bg-neutral-900/40" />
                     <div className="container mx-auto px-4 relative z-10">
                         <FadeIn>
                             <div className="mb-8 flex justify-center">
-                                <img src="/logo.png" alt="Dhruvil Textiles Logo" className="h-24 w-auto" />
+                                <img src="/logo.jpg" alt="Dhruvil Textiles Logo" className="h-24 w-auto" />
                             </div>
                             <span className="text-secondary uppercase tracking-[0.3em] text-xs font-bold">Our Legacy</span>
                             <h1 className="text-5xl md:text-7xl font-serif font-medium mt-6 mb-8 text-white">About Dhruvil Textiles</h1>
@@ -34,7 +35,7 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <Reveal className="h-full">
                             <div className="bg-white aspect-[4/5] rounded-sm flex items-center justify-center relative overflow-hidden h-full shadow-xl border border-neutral-200">
-                                <img src="/logo.png" alt="Dhruvil Textiles Logo" className="w-3/4 h-auto object-contain p-8" />
+                                <img src="/logo.jpg" alt="Dhruvil Textiles Logo" className="w-3/4 h-auto object-contain p-8" />
                             </div>
                         </Reveal>
                         <div>

@@ -11,8 +11,9 @@ export default function ManufacturingPage() {
         <>
             <Header />
             <main className="bg-[#F4F4F2]">
-                <section className="bg-primary py-32 text-white text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dark.svg')] opacity-5" />
+                <section className="bg-neutral-900 py-32 text-white text-center relative overflow-hidden flex flex-col justify-center min-h-[50vh]">
+                    <div className="absolute inset-0 bg-[url('/images/3.jpg')] bg-cover bg-center" />
+                    <div className="absolute inset-0 bg-neutral-900/40" />
                     <div className="container mx-auto px-4 relative z-10">
                         <FadeIn>
                             <span className="text-secondary uppercase tracking-[0.3em] text-xs font-bold">Behind The Scenes</span>

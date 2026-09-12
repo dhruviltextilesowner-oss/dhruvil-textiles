@@ -28,44 +28,26 @@ export default function Home() {
         <section ref={heroRef} className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-neutral-900 text-white">
           {/* Parallax Background */}
           <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
-            {/* Sophisticated Dark Overlay with Radial Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 z-10" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_60%)] z-15" />
-            {/* Placeholder for Cinematic Video/Image */}
-            <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-20 bg-cover bg-center" />
+            {/* Background Video */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/video/textiles.mp4" type="video/mp4" />
+            </video>
+            {/* Sophisticated Dark Overlay for readability */}
+            <div className="absolute inset-0 bg-neutral-900/60 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent z-15" />
           </motion.div>
 
-          <div className="relative z-30 container mx-auto px-4 text-center">
+          <div className="relative z-30 container mx-auto px-4 text-center h-full flex flex-col justify-end pb-24">
             <FadeIn delay={0.2} direction="up">
-              <span className="inline-block py-2 px-6 border border-white/20 rounded-full text-[10px] tracking-[0.3em] uppercase mb-8 text-white/80 bg-white/5 backdrop-blur-sm">
+              <span className="inline-block py-2 px-6 border border-white/20 rounded-full text-[10px] tracking-[0.3em] uppercase text-white/80 bg-white/5 backdrop-blur-sm">
                 Est. 1997 • Surat, India
               </span>
-            </FadeIn>
-
-            <div className="overflow-hidden mb-8">
-              <motion.h1
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.25, 0, 1], delay: 0.2 }}
-                className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-[0.9] text-balance text-white"
-              >
-                Precision <br />
-                <span className="italic font-light text-secondary">Threads</span>
-              </motion.h1>
-            </div>
-
-            <FadeIn delay={0.8} direction="up">
-              <p className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-                Crafting the finest Bullet Dori and Yarns for the world&apos;s leading textile artisans. Our Bullet Dori is used in embroidery thread.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button size="lg" variant="primary" asChild className="min-w-[180px]">
-                  <Link href="/products">Discover Collection</Link>
-                </Button>
-                <Link href="/contact" className="text-white hover:text-secondary transition-colors text-sm uppercase tracking-widest border-b border-transparent hover:border-secondary pb-1">
-                  Contact Us
-                </Link>
-              </div>
             </FadeIn>
           </div>
         </section>
