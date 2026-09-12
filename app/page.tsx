@@ -128,23 +128,31 @@ export default function Home() {
         </Section>
 
         {/* IMAGE BREAK / QUOTE */}
-        <section className="py-32 bg-primary text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern-dark.svg')] opacity-5" />
-          <div className="container mx-auto px-4 relative z-10 text-center">
-            <Reveal>
-              <Award className="w-12 h-12 text-secondary mx-auto mb-8" />
-            </Reveal>
-            <Reveal delay={0.2}>
-              <h2 className="text-3xl md:text-5xl font-serif leading-tight max-w-4xl mx-auto mb-10">
-                &quot;Quality is not an act, it is a habit. We have been weaving trust into every thread since 1997.&quot;
-              </h2>
-            </Reveal>
-            <Reveal delay={0.4}>
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-sm uppercase tracking-widest text-secondary">Manish Ishwarlal Gundarwala</span>
-                <span className="text-xs text-neutral-500 uppercase tracking-widest">Founder</span>
-              </div>
-            </Reveal>
+        <section className="relative w-full bg-[#111111] min-h-[500px] flex items-center py-20 overflow-hidden text-white">
+          {/* Background Image */}
+          <div className="absolute inset-0 bg-[url('/images/quote-bg-final.png')] bg-cover bg-right md:bg-center" />
+          
+          {/* Subtle gradient to ensure text readability on mobile without hiding the texture */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111]/80 via-[#111]/40 to-transparent w-full md:w-1/2 lg:w-2/3 z-0" />
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl pl-4 md:pl-12 border-l border-secondary/20">
+              <Reveal>
+                <Award className="w-8 h-8 text-secondary mb-6" />
+              </Reveal>
+              <Reveal delay={0.2}>
+                <h2 className="text-3xl md:text-4xl lg:text-[40px] font-serif font-normal leading-snug text-white mb-10 tracking-wide drop-shadow-lg">
+                  &quot;Quality is not an act, it is a habit. <br className="hidden md:block" />
+                  We have been weaving trust into every thread since 1997.&quot;
+                </h2>
+              </Reveal>
+              <Reveal delay={0.4}>
+                <div className="flex flex-col gap-2">
+                  <span className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-secondary drop-shadow-md">Manish Ishwarlal Gundarwala</span>
+                  <span className="text-[10px] text-white/50 uppercase tracking-[0.2em]">Founder</span>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 

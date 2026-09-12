@@ -13,17 +13,14 @@ export default function AboutPage() {
             <Header />
             <main className="bg-[#F4F4F2]">
                 {/* Header */}
-                <section className="bg-neutral-900 py-32 text-white text-center relative overflow-hidden flex flex-col justify-center min-h-[50vh]">
+                <section className="bg-neutral-900 text-white text-center relative overflow-hidden flex flex-col justify-center min-h-[60vh] py-32">
                     <div className="absolute inset-0 bg-[url('/images/1.jpg')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-neutral-900/40" />
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
                         <FadeIn>
-                            <div className="mb-8 flex justify-center">
-                                <img src="/logo.jpg" alt="Dhruvil Textiles Logo" className="h-24 w-auto" />
-                            </div>
-                            <span className="text-secondary uppercase tracking-[0.3em] text-xs font-bold">Our Legacy</span>
-                            <h1 className="text-5xl md:text-7xl font-serif font-medium mt-6 mb-8 text-white">About Dhruvil Textiles</h1>
-                            <p className="max-w-xl mx-auto text-neutral-400 text-lg leading-relaxed font-light">
+                            <span className="text-white/90 uppercase tracking-[0.4em] text-xs font-medium drop-shadow-md mb-6 block">Our Legacy</span>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-light text-white mb-6 drop-shadow-lg tracking-[0.2em] uppercase">About Dhruvil Textiles</h1>
+                            <p className="max-w-2xl mx-auto text-white/90 text-lg md:text-xl leading-relaxed font-light drop-shadow-md">
                                 Weaving trust and quality into every thread since 1997.
                             </p>
                         </FadeIn>
